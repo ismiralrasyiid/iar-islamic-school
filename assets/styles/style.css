@@ -1,0 +1,726 @@
+/* ===START RULE UMUM=== */
+:root{
+    --main-color : rgb(189, 66, 145);
+    --second-color : rgb(248, 176, 31);
+    font-size: 15px;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.7em;
+    letter-spacing: 1px;
+}
+.container{
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: center;
+}
+h1{
+    font-size: 1.625rem;
+}
+h2{
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+h3{
+    font-size: 1.125rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+strong.first{
+    font-weight: bold;
+    color: var(--main-color);
+}
+strong.second{
+    font-weight: bold;
+    color: var(--second-color);
+}
+em{
+    font-style: italic;
+}
+.order-satu{
+    order: 1;
+}
+.order-dua{
+    order: 2;
+}
+.scroll.active{
+    border-bottom: 1px solid var(--second-color);
+    color: var(--second-color);
+    transition: .3s;
+}
+.scroll.cta.active{
+    text-decoration: underline;
+}
+#toggler{
+    color: var(--main-color);
+    font-size: 2.5rem;
+    cursor: pointer;
+    margin-right: 10px;
+    display: none;
+    position: relative;
+    z-index: 99;
+}
+/* ===END RULE UMUM=== */
+
+/* ===START RULE HEADER=== */
+.navbar{
+    flex: 0 0 100%;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: calc(50% - 600px);
+    right: calc(50% - 600px);
+    max-width: 1200px;
+    background-color: white;
+    justify-content: space-between;
+    z-index: 99;
+}
+.navbar .brand{
+    display: flex;
+    align-items: center;
+    padding: 20px 15px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+.navbar .brand .logo{
+    font-size: 2.25rem;
+    font-weight: bold;
+    margin-right: 15px;
+    padding: 10px 15px;
+    font-family: 'Clicker Script', cursive;
+    color: var(--main-color);
+    border: 3px solid var(--second-color);
+    border-radius: 10px;
+}
+.navbar .nav{
+    display: flex;
+    font-size: 1.125rem;
+    align-items: center;
+}
+.navbar .nav li{
+    margin: 0 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.navbar .nav .item:hover{
+    border-bottom: 1px solid var(--main-color);
+    color: var(--main-color);
+}
+.navbar .nav .cta{
+    display: block;
+    padding: 15px;
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 10px;
+}
+.navbar .nav .cta:hover{
+    text-decoration: underline;
+}
+.hero{
+    padding-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero .illustration{
+    flex: 0 0 50%;
+    text-align: end;
+    padding: 20px;
+}
+.hero .illustration .image{
+    max-width: 100%;
+}
+.hero .illustration-text{
+    padding: 20px;
+    flex: 0 0 40%;
+    max-width: 40%;
+}
+.hero .illustration-text h1{
+    line-height: 1.5em;
+}
+.hero .illustration-text p{
+    margin: 20px 0 35px;
+}
+.hero .cta{
+    display: block;
+    max-width: 40%;
+    padding: 15px;
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto;
+}
+.hero .cta:hover{
+    text-decoration: underline;
+}
+/* ===END RULE HEADER=== */
+
+/* ===START RULE PENDIDIKAN=== */
+.pendidikan{
+    padding: 60px 10px 10px;
+}
+.pendidikan h2{
+    margin: 50px auto 40px;
+}
+.pendidikan > p{
+    text-align: center;
+    max-width: 70%;
+    margin: 0 auto 50px;
+}
+.pendidikan .pendidikan-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+.pendidikan .pendidikan-item .image-container{
+    position: relative;
+}
+.pendidikan .pendidikan-item .image-container.order-satu::before{
+    content: '';
+    display: block;
+    width: 25px;
+    height: 25px;
+    border-top-left-radius: 5px;
+    border-top: 7px solid var(--main-color);
+    border-left: 7px solid var(--main-color);
+    position: absolute;
+    top: 0;
+    left: 10px;
+}
+.pendidikan .pendidikan-item .image-container img{
+    padding: 15px 20px;
+    transform: scale(.9);
+}
+.pendidikan .pendidikan-item .image-container.order-dua::after{
+    content: '';
+    display: block;
+    width: 25px;
+    height: 25px;
+    border-bottom-right-radius: 5px;
+    border-bottom: 7px solid var(--main-color);
+    border-right: 7px solid var(--main-color);
+    position: absolute;
+    bottom: -20px;
+    right: 30px;
+}
+.pendidikan .pendidikan-item p{
+    text-align: start;
+    margin: 0 20px;
+}
+/* ===END RULE PENDIDIKAN=== */
+
+/* ===START RULE EKSKUL=== */
+.ekskul{
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 70px 0;
+    box-sizing: border-box;
+}
+.ekskul .ekskul-slider{
+    flex: 0 0 60%;
+    max-width: 60%;
+    /* border: 1px solid black; */
+    padding: 40px 90px;
+    box-sizing: border-box;
+    position: relative;
+    margin-left: -30px;
+}
+.ekskul .ekskul-slider h2{
+    margin-bottom: 20px;
+}
+.ekskul .ekskul-slider .slides{
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid var(--second-color);
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.ekskul .ekskul-slider .slides .slide-show{
+    width: 400%;
+    display: flex;
+}
+.ekskul .ekskul-slider input{
+    display: none;
+}
+.ekskul .ekskul-slider .slides .slide-show .slide-item{
+    flex: 0 0 25%;
+    max-width: 25%;
+    transition: 2s;
+    position: relative;
+}
+.ekskul .ekskul-slider .slides .slide-show .slide-item h3{
+    position: absolute;
+    top: 100;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    width: 200px;
+    margin: 0 auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 5px;
+    margin-top: 30px;
+}
+.ekskul .ekskul-slider .slides .slide-show .slide-item img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+/* START RULE NAV MANUAL */
+.ekskul .ekskul-slider .navigation-manual{
+    position: absolute;
+    width: calc(100% - 180px);
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+}
+.ekskul .ekskul-slider .navigation-manual .manual-btn{
+    border: 3px solid var(--second-color);
+    padding: 6px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.ekskul .ekskul-slider .navigation-manual .manual-btn:not(:last-child){
+    margin-right: 25px;
+}
+.ekskul .ekskul-slider .navigation-manual .manual-btn:hover{
+    background-color: var(--second-color);
+}
+/* MARGIN BERUBAH SAAT RADIO CHECKED */
+#radio1:checked ~ .slides .slide-show .first{
+    margin-left: 0;
+}
+#radio2:checked ~ .slides .slide-show .first{
+    margin-left: -25%;
+}
+#radio3:checked ~ .slides .slide-show .first{
+    margin-left: -50%;
+}
+/* END RULE NAV MANUAL */
+
+/* START RULE NAV AUTO */
+.ekskul .ekskul-slider .navigation-auto{
+    position: absolute;
+    width: calc(100% - 180px);
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+.ekskul .ekskul-slider .navigation-auto div{
+    border: 3px solid var(--second-color);
+    padding: 6px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.ekskul .ekskul-slider .navigation-auto div:not(:last-child){
+    margin-right: 25px;
+}
+/* BACKGROUND FILLED SAAT RADIO CHECKED */
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background-color: var(--second-color);
+}
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background-color: var(--second-color);
+}
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background-color: var(--second-color);
+}
+/* END RULE NAV AUTO */
+.ekskul .pengajar{
+    flex: 0 0 40%;
+    max-width: 40%;
+    padding: 40px 5px;
+    /* border: 1px solid black; */
+    box-sizing: border-box;
+}
+.ekskul .pengajar .list-pengajar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.ekskul .pengajar .list-pengajar .card{
+    width: 45%;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .1);
+    border: 1px solid var(--second-color);
+    /* background-color: var(--second-color); */
+    border-radius: 10px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 3px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+.ekskul .pengajar .list-pengajar .card img{
+    width: 100%;
+    height: auto;
+    display: block;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.ekskul .pengajar .list-pengajar .card:nth-child(2) img{
+    filter: sepia();
+}
+.ekskul .pengajar .list-pengajar .card h4{
+    text-transform: uppercase;
+    background-color: white;
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin: 30px 10px 0;
+    letter-spacing: 1px;
+}
+.ekskul .pengajar .list-pengajar .card .job{
+    font-size: 0.875rem;
+    margin: 5px 10px 0;
+    font-weight: bold;
+    letter-spacing: 0;
+}
+.ekskul .pengajar .list-pengajar .card .quot{
+    font-size: 0.75rem;
+    margin: 10px 10px 0;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+.ekskul .pengajar .list-pengajar .card ul{
+    display: flex;
+    padding: 5px 10px;
+    margin-top: auto;
+}
+.ekskul .pengajar .list-pengajar .card ul li i{
+    transition: all ease .3s;
+}
+.ekskul .pengajar .list-pengajar .card ul li:hover i{
+    transform: translateY(-4px);
+}
+.ekskul .pengajar .list-pengajar .card ul li:not(:last-child){
+    margin-right: 10px;
+}
+/* ===END RULE EKSKUL=== */
+
+/* ===START RULE PENDAFTARAN=== */
+.pendaftaran{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding-top: 75px;
+    box-sizing: border-box;
+}
+.pendaftaran h2{
+    margin: 20px 0 30px;
+}
+.pendaftaran form{
+    width: 760px;
+    margin: 0 auto;
+    padding: 40px 30px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, .1);
+    border: 2px solid var(--main-color);
+}
+.pendaftaran form div{
+    display: flex;
+    width: 100%;
+    padding: 15px 0;
+}
+.pendaftaran form div label{
+    flex: 0 0 50%;
+    font-weight: bold;
+}
+.pendaftaran form div input{
+    flex: 0 0 50%;
+    display: block;
+    margin: 0;
+    padding: 6px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.pendaftaran form div input.nama{
+    text-transform: capitalize;
+}
+.pendaftaran form div select{
+    flex: 0 0 50%;
+    display: block;
+    margin: 0;
+    padding: 6px;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+.pendaftaran form div:last-child{
+    margin-top: 30px;
+}
+.pendaftaran form div .submit{
+    background-color: white;
+    padding: 15px 25px;
+    margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 3px;
+    border-radius: 5px;
+    flex-basis: auto;
+    cursor: pointer;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+}
+.pendaftaran form div .submit:hover{
+    text-decoration: underline;
+}
+/* ===END RULE PENDAFTARAN=== */
+
+/* ===START RULE FOOTER=== */
+footer{
+    padding-top: 80px;
+}
+footer .container{
+    max-width: 100vw;
+    background-color: var(--main-color);
+    color: white;
+    font-size: 0.6875rem;
+    padding: 20px;
+}
+footer .container ul li a{
+    color: white;
+    text-decoration: underline;
+}
+/* ===END RULE FOOTER=== */
+
+/* ===START MEDIA QUERY=== */
+@media screen and (max-width : 1199px){
+    :root{
+        font-size: 14px;
+    }
+    .container{
+        max-width: 100vw;
+    }
+    .navbar{
+        left: 0;
+        right: 0;
+        padding-right: 5px;
+    }
+    .pendidikan .pendidikan-item .image-container img{
+        transform: scale(.7);
+    }
+}
+@media screen and (max-width : 998px){
+    :root{
+        font-size: 12px;
+    }
+    .hero{
+        padding-top: 0;
+        min-height: 100vh;
+    }
+    .hero .illustration{
+        flex: 0 0 40%;
+    }
+    .pendidikan > p{
+        max-width: 100%;
+        text-align: justify;
+        margin-left: 20px;
+        margin-right: 20px;
+        text-indent: 25px;
+    }
+    .pendidikan .pendidikan-item{
+        flex-direction: column;
+    }
+    .pendidikan .pendidikan-item p{
+        text-align: justify;
+        text-indent: 25px;
+    }
+    .pendidikan .pendidikan-item .image-container img{
+        padding: 0;
+    }
+    .pendidikan .pendidikan-item .image-container.order-satu{
+        order: 3;
+    }
+    .pendidikan .pendidikan-item .image-container.order-dua::after{
+        display: none !important;
+    }
+    .pendidikan .pendidikan-item .image-container.order-satu::before{
+        display: none !important;
+    }
+    .ekskul{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .ekskul .ekskul-slider{
+        flex: 0 0 90%;
+        max-width: 90%;
+        margin-left: 0;
+    }
+    .ekskul .pengajar{
+        flex: 0 0 55%;
+        max-width: 55%;
+    }
+    .ekskul .pengajar .pp-kosong{
+        height: 18.75vw !important;
+    }
+    .nav{
+        position: fixed;
+        top: 0;
+        left: -100%;
+        right: 100%;
+        bottom: 0;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: .5s;
+    }
+    .nav li{
+        padding: 20px 0;
+    }
+    .nav.toggled{
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+    #toggler{
+        display: block;
+    }
+}
+@media screen and (max-width : 767px){
+    .hero{
+        flex-direction: column;
+        padding-top: 80px;
+    }
+    .hero .illustration{
+        flex: 0 0 auto;
+        width: 45%;
+    }
+    .hero .illustration-text{
+        padding-top : 0;
+        text-align: center;
+        flex: 0 0 auto;
+        max-width: 70%;
+    }
+    .hero .illustration-text p{
+        text-align: justify;
+        text-indent: 20px;
+    }
+    .ekskul .ekskul-slider{
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+    .ekskul .ekskul-slider .navigation-manual, .ekskul .ekskul-slider .navigation-auto{
+        width: calc(100% - 120px);
+    }
+    .ekskul .pengajar{
+        flex: 0 0 65%;
+        max-width: 65%;
+    }
+    .ekskul .pengajar .pp-kosong{
+        height: 22.5vw !important;
+    }
+    .pendaftaran form{
+        width: 80%;
+    }
+    .pendaftaran form div{
+        flex-wrap: wrap;
+    }
+}
+@media screen and (max-width : 575px){
+    .nav{
+        transition: none;
+    }
+    .hero .illustration{
+        width: 55%;
+    }
+    .hero .illustration-text{
+        max-width: 100%;
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+    .ekskul .ekskul-slider{
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .ekskul .ekskul-slider .navigation-manual, .ekskul .ekskul-slider .navigation-auto{
+        width: calc(100% - 60px);
+    }
+    .ekskul .pengajar{
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .ekskul .pengajar .list-pengajar .card:last-child{
+        margin-top: 5px;
+    } 
+    .ekskul .pengajar .list-pengajar .card{
+        width: 90%;
+    }
+    .ekskul .pengajar .pp-kosong{
+        height: 32vw !important;
+    }
+    .pendaftaran form div{
+        flex-direction: column;
+    }
+    .pendaftaran form div label{
+        margin-bottom: 3px;
+    }
+}
+@media screen and (max-width : 424px){
+    html{
+        scroll-behavior: auto;
+    }
+    .hero .illustration{
+        flex: 0 0 auto;
+        width: 70%;
+    }
+    .pendidikan{
+        width: 100vw;
+    }
+    .ekskul .ekskul-slider{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .ekskul .ekskul-slider .navigation-manual, .ekskul .ekskul-slider .navigation-auto{
+        width: calc(100% - 20px);
+    }
+    .ekskul .pengajar{
+        flex: 0 0 75%;
+        max-width: 75%;
+    }
+    .ekskul .pengajar .pp-kosong{
+        height: 48vw !important;
+    }
+    .pendaftaran form{
+        width: 95%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+/* ===END MEDIA QUERY=== */
